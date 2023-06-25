@@ -1,7 +1,7 @@
-import React from "react";
-import HungerHeader from "./HungerHeader";
-import db from "../../db";
 import { addDoc, collection } from "firebase/firestore";
+import React from "react";
+import db from "../../db";
+import HungerHeader from "./HungerHeader";
 
 function hungerRelief() {
   const [form, setForm] = React.useState({
@@ -36,16 +36,16 @@ function hungerRelief() {
       phoneNumber: form.phone,
       cause: form.cause,
       address: form.amount,
-      date: new Date(),
+      date: new Date().toLocaleString(),
     });
 
-    localStorage.setItem('amount', form.amount)
+    localStorage.setItem("amount", form.amount);
     setIsSubmitting(false);
-    window.location.href="/payment.html";
+    window.location.href = "/payment.html";
   }
   return (
     <div>
-      <HungerHeader/>
+      <HungerHeader />
       <div className="form-div">
         <form onSubmit={submit}>
           <div className="form-row">
@@ -74,7 +74,7 @@ function hungerRelief() {
               />
             </div>
           </div>
-          
+
           <div className="form-row">
             <div className="form-group col-md-6">
               <label for="inputCity">Phone Number</label>
@@ -85,8 +85,9 @@ function hungerRelief() {
                 className="form-control"
                 id="inputPhone"
                 required
+                pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}"
                 onChange={(e) => handleChange(e)}
-                
+                title="Please enter a valid phone number"
               />
             </div>
             <div className="form-group col-md-4">
@@ -97,9 +98,11 @@ function hungerRelief() {
                 className="form-control"
                 required
                 onChange={(e) => handleChange(e)}
-                
+                defaultValue=""
               >
-                <option selected>Select Cause</option>
+                <option disabled value="">
+                  Select Cause
+                </option>
                 <option value="General Pool">General Pool</option>
                 <option value="Hunger Relief">Hungry Relief</option>
                 <option value="Help the Ill">Help the ill</option>
@@ -107,17 +110,17 @@ function hungerRelief() {
               </select>
             </div>
             <div className="form-group col-3">
-            <label for="inputAddress2">Amount</label>
-            <input
-              onChange={(e) => handleChange(e)}
-              name="amount"
-              type="number"
-              className="form-control"
-              id="inputAddress2"
-              placeholder="INR"
-              required
-            />
-          </div>
+              <label for="inputAddress2">Amount</label>
+              <input
+                onChange={(e) => handleChange(e)}
+                name="amount"
+                type="number"
+                className="form-control"
+                id="inputAddress2"
+                placeholder="INR"
+                required
+              />
+            </div>
           </div>
           <button
             type="submit"

@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.16e9445e.css",
-    "main.js": "/static/js/main.873b9c0e.js",
+    "main.css": "/static/css/main.7f4fd7e6.css",
+    "main.js": "/static/js/main.7a2f2bd9.js",
     "static/media/img2.jpg": "/static/media/img2.64e36896334153132c01.jpg",
     "static/media/donatedark.jpg": "/static/media/donatedark.d4c4395efe97bfd5d6e4.jpg",
     "static/media/donate1.jpg": "/static/media/donate1.fd4a3eefb691c5e1b5af.jpg",
@@ -16,11 +16,11 @@
     "static/media/sadaqalogo.png": "/static/media/sadaqalogo.0af83ef68072ddfe18de.png",
     "static/media/img1.jpg": "/static/media/img1.43dce0f7aff2bb30a896.jpg",
     "index.html": "/index.html",
-    "main.16e9445e.css.map": "/static/css/main.16e9445e.css.map",
-    "main.873b9c0e.js.map": "/static/js/main.873b9c0e.js.map"
+    "main.7f4fd7e6.css.map": "/static/css/main.7f4fd7e6.css.map",
+    "main.7a2f2bd9.js.map": "/static/js/main.7a2f2bd9.js.map"
   },
   "entrypoints": [
-    "static/css/main.16e9445e.css",
-    "static/js/main.873b9c0e.js"
+    "static/css/main.7f4fd7e6.css",
+    "static/js/main.7a2f2bd9.js"
   ]
 }
