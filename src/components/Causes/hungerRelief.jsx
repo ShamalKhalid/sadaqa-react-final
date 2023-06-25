@@ -35,11 +35,12 @@ function hungerRelief() {
       email: form.email,
       phoneNumber: form.phone,
       cause: form.cause,
-      amount: form.amount,
+      address: form.amount,
       date: new Date().toLocaleString(),
     });
 
     localStorage.setItem("amount", form.amount);
+    localStorage.setItem("cause", form.cause);
     setIsSubmitting(false);
     window.location.href = "/payment.html";
   }

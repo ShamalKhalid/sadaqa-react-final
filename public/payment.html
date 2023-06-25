@@ -163,6 +163,8 @@
 <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
 <script type="text/javascript">
   document.querySelectorAll(".price").forEach(i => i.innerHTML = 'INR '+localStorage.getItem('amount'))
+  document.querySelector(".item-name").innerHTML = localStorage.getItem('cause')
+  
 </script>
 <script src="payment.js"></script>
 </body>
