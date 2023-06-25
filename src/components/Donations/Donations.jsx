@@ -1,6 +1,7 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db from "../../db";
+import Footer from "../Home/Footer";
 
 const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {
   month: "2-digit",
@@ -8,7 +9,7 @@ const dateTimeFormatter = new Intl.DateTimeFormat("en-US", {
   year: "numeric",
 });
 
-export default function Donations() {
+function Donations() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState();
   const [from, setFrom] = useState();
@@ -34,6 +35,7 @@ export default function Donations() {
   }, []);
   return (
     <div>
+    <div className="donationHistory">
       <div className="input-group mb-3">
         <input
           type="date"
@@ -53,9 +55,6 @@ export default function Donations() {
           onChange={(e) => setTo(e.target.value)}
         />
       </div>
-      <button className="btn btn-primary" onClick={async () => await getData()}>
-        Refresh
-      </button>
       <table className="table">
         <thead>
           <tr>
@@ -86,6 +85,18 @@ export default function Donations() {
           )}
         </tbody>
       </table>
+      <button
+        className="btn btn-primary refresh"
+        onClick={async () => await getData()}
+      >
+        Refresh
+      </button>
     </div>
+    <div>
+        <footer className="DonateFooter">©Sadaqa-2023</footer>
+      </div>
+      </div>
   );
 }
+
+export default Donations;

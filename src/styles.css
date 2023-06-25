@@ -499,3 +499,65 @@ body {
 .left {
   padding-right: 3%;
 }
+/* History */
+
+.History{
+  height: 30vh;
+  background-color: #c9efd3;
+  margin-top: 1%;
+  padding-top: 3%;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+}
+.donateButton{
+  
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  min-height: 36px;
+  min-width: 36px;
+  color: #ffffff;
+  background: #008060;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+  :hover {
+      background: #006e52;
+  }
+
+  margin-top: 2%;
+}
+/* Table Donation */
+
+.donationHistory{
+  margin: 4% 10% 10% 10%;
+}
+.refresh{
+  margin-top: 3%;
+  background-color: #008060;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  display: inline-block;
+  outline: 0;
+  cursor: pointer;
+  text-align: center;
+  border: 0;
+  padding: 7px 16px;
+  min-height: 36px;
+  min-width: 36px;
+  box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 0px 0px, rgba(0, 0, 0, 0.2) 0px -1px 0px 0px inset;
+}
+.DonateFooter{
+  background-color: cadetblue;
+  color: #ffff;
+  text-align: center;
+  padding-bottom: 2%;
+  margin-top: 14%;
+  padding-top: 2%;
+  width: 100%;
+}

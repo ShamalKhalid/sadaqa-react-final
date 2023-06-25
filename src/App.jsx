@@ -6,6 +6,7 @@ import Home from "./Home";
 import Donations from "./components/Donations/Donations"
 import LoginForm from "./components/login/LoginForm";
 import Signup from "./components/login/SignUpForm";
+import DonationApp from "./components/Donations/DonationApp";
 import hungerRelief from "./components/Causes/hungerRelief";
 import { Helmet } from "react-helmet";
 import sadaqalogo from "../src/components/img/sadaqalogo.png"
@@ -25,7 +26,7 @@ function App() {
         <Route path="/LoginForm" component={LoginForm} />
         <Route path="/SignupForm" component={Signup} />
         <Route path="/hungerRelief" component={hungerRelief} />
-        <Route path="/donations" component={Donations} />
+        <Route path="/Donations" component={DonationApp}/>
       </Switch>
     </Router>
     </div>

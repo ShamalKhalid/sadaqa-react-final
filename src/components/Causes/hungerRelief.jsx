@@ -35,7 +35,7 @@ function hungerRelief() {
       email: form.email,
       phoneNumber: form.phone,
       cause: form.cause,
-      address: form.amount,
+      amount: form.amount,
       date: new Date().toLocaleString(),
     });
 
