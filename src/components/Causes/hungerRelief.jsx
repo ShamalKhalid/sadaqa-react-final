@@ -35,8 +35,8 @@ function hungerRelief() {
       email: form.email,
       phoneNumber: form.phone,
       cause: form.cause,
-      address: form.amount,
-      date: new Date().toLocaleString(),
+      amount: form.amount,
+      date: new Date().toISOString(),
     });
 
     localStorage.setItem("amount", form.amount);
@@ -50,8 +50,10 @@ function hungerRelief() {
       <div className="form-div">
         <form onSubmit={submit}>
           <div className="form-row">
+          <div class="col-md-6">
+          <label for="inputEmail4">Full Name</label>
+          </div>
             <div className="form col-10">
-              <label for="inputEmail4">Full Name</label>
               <input
                 onChange={(e) => handleChange(e)}
                 name="name"
@@ -62,8 +64,13 @@ function hungerRelief() {
                 required
               />
             </div>
-            <div className="form col-10">
+            </div>
+            <div className="form-row">
+            
+            <div className="col-12">
               <label for="inputPassword4">Email Address</label>
+              </div>
+              <div className="form col-10">
               <input
                 onChange={(e) => handleChange(e)}
                 name="email"
@@ -86,9 +93,10 @@ function hungerRelief() {
                 className="form-control"
                 id="inputPhone"
                 required
-                pattern="((\+*)((0[ -]*)*|((91 )*))((\d{12})+|(\d{10})+))|\d{5}([- ]*)\d{6}"
+                minlength="10"
+                pattern="\d{10}"
+                title="Please enter exactly 10 digits"
                 onChange={(e) => handleChange(e)}
-                title="Please enter a valid phone number"
               />
             </div>
             <div className="form-group col-md-4">
