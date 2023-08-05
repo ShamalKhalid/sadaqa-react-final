@@ -1,7 +1,6 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useEffect, useState } from "react";
 import db from "../../db";
-import Footer from "../Home/Footer";
 
 const dateTimeFormatter = new Intl.DateTimeFormat("en-GB", {
   year: "numeric",
@@ -12,8 +11,8 @@ const dateTimeFormatter = new Intl.DateTimeFormat("en-GB", {
 function Donations() {
   const [data, setData] = useState([]);
   const [loading, setLoading] = useState();
-  const [from, setFrom] = useState();
-  const [to, setTo] = useState();
+  const [from, setFrom] = useState(new Date().toISOString().split('T')[0]);
+  const [to, setTo] = useState(new Date(new Date().setDate(new Date().getDate()+1)).toISOString().split('T')[0]);
 
   const filterDate = (date) => {
     if (!from || !to) return true;

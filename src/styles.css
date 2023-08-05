@@ -129,6 +129,8 @@ p {
   height: 1100px;
   margin-bottom: -200px;
   margin-top: -300px;
+  object-fit: cover;
+
 }
 .intro {
   position: relative;
