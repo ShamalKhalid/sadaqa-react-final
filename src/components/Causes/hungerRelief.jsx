@@ -23,7 +23,7 @@ function hungerRelief() {
       return { ...values, [field]: value };
     });
 
-    console.log(form);
+    // console.log(form);
   }
 
   async function submit(e) {
@@ -43,18 +43,12 @@ function hungerRelief() {
     localStorage.setItem("amount", form.amount);
     localStorage.setItem("cause", form.cause);
     setIsSubmitting(false);
-    
-  }
+    console.log('Selected Cause:', form.cause);
 // testtt
 
-const handleCauseChange = (event) => {
-  setSelectedCause(event.target.value);
-};
-const handleSubmit = (event) => {
-  event.preventDefault();
 
     // Redirect to the appropriate link based on the selected cause
-    switch (selectedCause) {
+    switch (form.cause) {
       case 'General Pool':
         window.location.href = 'https://pages.razorpay.com/pl_MLcvVFTTev8OsQ/view';
         break;
@@ -72,7 +66,17 @@ const handleSubmit = (event) => {
         break;
     }
   };
-
+  
+  const handleCauseChange = (event) => {
+    const value = event.target.value;
+    setSelectedCause(value);
+    setForm((prevForm) => ({
+      ...prevForm,
+      cause: value,
+    }));
+  };
+  
+  
   return (
     <div>
       <HungerHeader />
@@ -135,7 +139,7 @@ const handleSubmit = (event) => {
                 id="inputCause"
                 className="form-control"
                 required
-                value = {selectedCause}
+                value = {form.cause}
                 onChange={handleCauseChange}
                 defaultValue=""
               >
