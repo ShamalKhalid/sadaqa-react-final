@@ -50,7 +50,7 @@ function hungerRelief() {
     // Redirect to the appropriate link based on the selected cause
     switch (form.cause) {
       case 'General Pool':
-        window.location.href = 'https://pages.razorpay.com/pl_MLcvVFTTev8OsQ/view';
+        window.location.href = 'https://pages.razorpay.com/pl_MLd08BKVyU4YmT/view';
         break;
       case 'Hunger Relief':
         window.location.href = 'https://pages.razorpay.com/pl_MLGxNutDAk29rQ/view';
