@@ -1,5 +1,5 @@
 import { addDoc, collection } from "firebase/firestore";
-import React from "react";
+import React, {useState}from "react";
 import db from "../../db";
 import HungerHeader from "./HungerHeader";
 
@@ -13,6 +13,7 @@ function hungerRelief() {
   });
 
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [selectedCause, setSelectedCause] = useState('');
 
   function handleChange(e) {
     const field = e.target.name;
@@ -42,8 +43,36 @@ function hungerRelief() {
     localStorage.setItem("amount", form.amount);
     localStorage.setItem("cause", form.cause);
     setIsSubmitting(false);
-    window.location.href = "/payment.html";
+    
   }
+// testtt
+
+const handleCauseChange = (event) => {
+  setSelectedCause(event.target.value);
+};
+const handleSubmit = (event) => {
+  event.preventDefault();
+
+    // Redirect to the appropriate link based on the selected cause
+    switch (selectedCause) {
+      case 'General Pool':
+        window.location.href = 'https://pages.razorpay.com/pl_MLcvVFTTev8OsQ/view';
+        break;
+      case 'Hunger Relief':
+        window.location.href = 'https://pages.razorpay.com/pl_MLGxNutDAk29rQ/view';
+        break;
+      case 'Help the Ill':
+        window.location.href = 'https://pages.razorpay.com/pl_MLckUDEDp1qnOJ/view';
+        break;
+      case 'Education':
+        window.location.href = 'https://pages.razorpay.com/pl_MLcvVFTTev8OsQ/view';
+        break;
+      default:
+        // Handle other cases or show an error message
+        break;
+    }
+  };
+
   return (
     <div>
       <HungerHeader />
@@ -106,7 +135,8 @@ function hungerRelief() {
                 id="inputCause"
                 className="form-control"
                 required
-                onChange={(e) => handleChange(e)}
+                value = {selectedCause}
+                onChange={handleCauseChange}
                 defaultValue=""
               >
                 <option disabled value="">
@@ -136,8 +166,7 @@ function hungerRelief() {
             className="btn btn-primary"
             disabled={isSubmitting}
           >
-            {!isSubmitting && "Donate Now"}
-            {isSubmitting && "Submitting"}
+            {!isSubmitting ? "Donate Now" : "Submitting"}
           </button>
         </form>
       </div>
