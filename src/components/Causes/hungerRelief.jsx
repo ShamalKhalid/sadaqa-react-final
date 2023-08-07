@@ -50,7 +50,7 @@ function hungerRelief() {
     // Redirect to the appropriate link based on the selected cause
     switch (form.cause) {
       case 'General Pool':
-        window.location.href = 'https://pages.razorpay.com/pl_MLcvVFTTev8OsQ/view';
+        window.location.href = 'https://pages.razorpay.com/pl_MLd08BKVyU4YmT/view';
         break;
       case 'Hunger Relief':
         window.location.href = 'https://pages.razorpay.com/pl_MLGxNutDAk29rQ/view';
@@ -75,6 +75,7 @@ function hungerRelief() {
       cause: value,
     }));
   };
+  
   
   
   return (
@@ -161,6 +162,7 @@ function hungerRelief() {
                 className="form-control"
                 id="inputAddress2"
                 placeholder="INR"
+                value={form.amount}
                 required
               />
             </div>

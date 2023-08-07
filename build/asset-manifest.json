@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.b81e007f.css",
-    "main.js": "/static/js/main.8d2c5dc4.js",
+    "main.css": "/static/css/main.ffafeafc.css",
+    "main.js": "/static/js/main.afbdad3b.js",
     "static/media/img2.jpg": "/static/media/img2.64e36896334153132c01.jpg",
     "static/media/donatedark.jpg": "/static/media/donatedark.d4c4395efe97bfd5d6e4.jpg",
     "static/media/donate1.jpg": "/static/media/donate1.fd4a3eefb691c5e1b5af.jpg",
@@ -16,11 +16,11 @@
     "static/media/sadaqalogo.png": "/static/media/sadaqalogo.0af83ef68072ddfe18de.png",
     "static/media/img1.jpg": "/static/media/img1.43dce0f7aff2bb30a896.jpg",
     "index.html": "/index.html",
-    "main.b81e007f.css.map": "/static/css/main.b81e007f.css.map",
-    "main.8d2c5dc4.js.map": "/static/js/main.8d2c5dc4.js.map"
+    "main.ffafeafc.css.map": "/static/css/main.ffafeafc.css.map",
+    "main.afbdad3b.js.map": "/static/js/main.afbdad3b.js.map"
   },
   "entrypoints": [
-    "static/css/main.b81e007f.css",
-    "static/js/main.8d2c5dc4.js"
+    "static/css/main.ffafeafc.css",
+    "static/js/main.afbdad3b.js"
   ]
 }
