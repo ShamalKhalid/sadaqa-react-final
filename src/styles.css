@@ -187,10 +187,12 @@ p {
   height: 35vh;
   object-fit: cover;
   border-radius: 50%;
+  position: relative;
+  left: 16%;
 }
 @media (max-width: 990px) {
   .imagediv {
-    padding-left: 10%;
+    padding-left: 0px;
     padding-right: 10%;
     height: 50vh;
   }
@@ -211,6 +213,7 @@ p {
 
 .founderInfo {
   text-align: center;
+  padding-top: 30%;
 }
 .founderInfo p {
   text-align: center;

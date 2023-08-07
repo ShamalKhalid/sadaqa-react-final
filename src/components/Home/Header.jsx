@@ -43,13 +43,13 @@ function Header() {
                   Donate
                 </a>
               </li>
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <div>
                   <Link to="/LoginForm" className="nav-link ">
                     Login
                   </Link>
                 </div>
-              </li>
+              </li> */}
             </ul>
           </div>
         </nav>
